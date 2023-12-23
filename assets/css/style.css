@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2023 codewithsadee
+ * copyright 2023 sitinurfadhilah
  */
 
 /*-----------------------------------*\
@@ -11,7 +11,7 @@
 \*-----------------------------------*/
 :root {
   /*** COLORS ***/
-  --background: hsla(220, 17%, 7%, 1);
+  --background: rgb(255, 255, 255);
   --banner-background: hsla(250, 6%, 20%, 1);
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --on-background: hsla(220, 100%, 95%, 1);
@@ -43,11 +43,98 @@
 
   /* font weight */
   --weight-bold: 700;
+
+  /*** SHADOW ***/
+  --shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.75);
+  --shadow-2: 0 2px 4px hsla(350, 100%, 43%, 0.3);
+
+  /*** BORDER RADIUS ***/
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-36: 36px;
+
+  /*** TRANSITION ***/
+  --transition-short: 250ms ease;
+  --transition-long: 500ms ease;
 }
 
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+ifram,
+button {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  height: auto;
+}
+
+input,
+button {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  text-align: left;
+}
+
+html {
+  font-family: var(--ff-dm-sans);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-color);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+:focus-visible {
+  outline-color: var(--primary-variant);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+  border-radius: var(--radius-8);
+}
 
 /*-----------------------------------*\
   #REUSED STYLE
